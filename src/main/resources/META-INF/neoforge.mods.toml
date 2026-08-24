@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "GPL-3.0"
+issueTrackerURL = "https://github.com/Minsecrus/trtr/issues"
+
+[[mods]]
+modId = "trtr"
+version = "0.1.0"
+displayName = "The Road to Reality"
+authors = "Minsecrus"
+description = '''
+Real inorganic chemistry and a historically grounded industrial progression, from knapped flint to electrolysis.
+'''
+
+[[dependencies.trtr]]
+    modId = "neoforge"
+    type = "required"
+    versionRange = "[21.1.0,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.trtr]]
+    modId = "minecraft"
+    type = "required"
+    versionRange = "[1.21.1,1.22)"
+    ordering = "NONE"
+    side = "BOTH"
