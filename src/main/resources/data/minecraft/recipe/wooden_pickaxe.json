@@ -1,0 +1,9 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:false", "comment": "trtr: 采掘走燧石→散石→粗石路线（ADR-005/003）" }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [ "PPP", " S ", " S " ],
+  "key": { "P": { "tag": "minecraft:planks" }, "S": { "item": "minecraft:stick" } },
+  "result": { "id": "minecraft:wooden_pickaxe" }
+}

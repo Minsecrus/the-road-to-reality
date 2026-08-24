@@ -2,5 +2,11 @@
   "itemGroup.trtr.main": "The Road to Reality",
   "item.trtr.flint_shard": "Flint Shard",
   "item.trtr.wood_stick": "Wood Stick",
-  "item.trtr.plant_fiber": "Plant Fiber"
+  "item.trtr.plant_fiber": "Plant Fiber",
+  "item.trtr.flint_axe": "Flint Axe",
+  "item.trtr.flint_knife": "Flint Knife",
+  "item.trtr.flint_shovel": "Flint Shovel",
+  "item.trtr.flint_hoe": "Flint Hoe",
+  "item.trtr.crude_stone_pickaxe": "Crude Stone Pickaxe",
+  "block.trtr.loose_stone": "Loose Stone"
 }

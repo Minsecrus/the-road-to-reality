@@ -8,6 +8,7 @@ public class TRTR {
     public static final String MODID = "trtr";
 
     public TRTR(IEventBus modBus) {
+        TRTRBlocks.BLOCKS.register(modBus);
         TRTRItems.ITEMS.register(modBus);
         TRTRCreativeTabs.TABS.register(modBus);
     }

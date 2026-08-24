@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FF",
+    " S",
+    " S"
+  ],
+  "key": {
+    "F": { "item": "trtr:flint_shard" },
+    "S": { "item": "trtr:wood_stick" }
+  },
+  "result": { "id": "trtr:flint_hoe", "count": 1 }
+}
