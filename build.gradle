@@ -6,6 +6,11 @@ plugins {
 version = project.mod_version
 group = project.mod_group_id
 
+repositories {
+    maven { url = 'https://maven.aliyun.com/repository/central' }
+    mavenCentral()
+}
+
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
 }
@@ -30,6 +35,16 @@ neoForge {
             sourceSet(sourceSets.main)
         }
     }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
 }
 
 tasks.withType(JavaCompile).configureEach {
