@@ -1,4 +1,43 @@
 {
-  "parent": "minecraft:block/cube_all",
-  "textures": { "all": "trtr:block/loose_stone" }
+  "parent": "minecraft:block/block",
+  "ambientocclusion": false,
+  "textures": { "stone": "trtr:block/loose_stone" },
+  "elements": [
+    {
+      "from": [5, 0, 5],
+      "to": [11, 4, 11],
+      "faces": {
+        "down":  { "texture": "#stone", "cullface": "down" },
+        "up":    { "texture": "#stone" },
+        "north": { "texture": "#stone" },
+        "south": { "texture": "#stone" },
+        "west":  { "texture": "#stone" },
+        "east":  { "texture": "#stone" }
+      }
+    },
+    {
+      "from": [9, 0, 4],
+      "to": [12, 3, 8],
+      "faces": {
+        "down":  { "texture": "#stone" },
+        "up":    { "texture": "#stone" },
+        "north": { "texture": "#stone" },
+        "south": { "texture": "#stone" },
+        "west":  { "texture": "#stone" },
+        "east":  { "texture": "#stone" }
+      }
+    },
+    {
+      "from": [3, 0, 9],
+      "to": [7, 3, 13],
+      "faces": {
+        "down":  { "texture": "#stone" },
+        "up":    { "texture": "#stone" },
+        "north": { "texture": "#stone" },
+        "south": { "texture": "#stone" },
+        "west":  { "texture": "#stone" },
+        "east":  { "texture": "#stone" }
+      }
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 package com.trtr;
 
-import net.minecraft.world.level.block.Block;
+import com.trtr.block.LooseStoneBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -13,9 +13,10 @@ public final class TRTRBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TRTR.MODID);
 
     /** 散石：无工具要求，任何人可采（hardness 低）。 */
-    public static final DeferredBlock<Block> LOOSE_STONE = BLOCKS.register("loose_stone",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+    public static final DeferredBlock<LooseStoneBlock> LOOSE_STONE = BLOCKS.register("loose_stone",
+            () -> new LooseStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                     .strength(1.2F)
+                    .noOcclusion()
                     .mapColor(net.minecraft.world.level.material.MapColor.STONE)));
 
     private TRTRBlocks() {}
