@@ -1,7 +1,7 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 3,
+    "tries": 16,
     "xz_spread": 5,
     "y_spread": 0,
     "feature": {
@@ -10,22 +10,33 @@
         "config": {
           "to_place": {
             "type": "minecraft:simple_state_provider",
-            "state": { "Name": "trtr:loose_stone" }
+            "state": {
+              "Name": "trtr:loose_stone"
+            }
           }
         }
       },
       "placement": [
-        { "type": "minecraft:in_square" },
+        {
+          "type": "minecraft:heightmap",
+          "heightmap": "MOTION_BLOCKING_NO_LEAVES"
+        },
         {
           "type": "minecraft:block_predicate_filter",
           "predicate": {
             "type": "minecraft:all_of",
             "predicates": [
-              { "type": "minecraft:matching_blocks", "blocks": ["minecraft:air"] },
               {
                 "type": "minecraft:matching_blocks",
-                "offset": [0, -1, 0],
-                "blocks": ["minecraft:grass_block", "minecraft:dirt", "minecraft:coarse_dirt", "minecraft:podzol", "minecraft:snow_block", "minecraft:sand", "minecraft:gravel", "minecraft:stone"]
+                "blocks": [
+                  "minecraft:air"
+                ]
+              },
+              {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "trtr:loose_stone"
+                }
               }
             ]
           }

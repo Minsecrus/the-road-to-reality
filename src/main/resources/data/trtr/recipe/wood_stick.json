@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    { "tag": "minecraft:planks" }
-  ],
-  "result": { "id": "trtr:wood_stick", "count": 4 }
-}

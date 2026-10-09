@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "trtr:item/wood_stick"
+    "layer0": "trtr:item/flint_shard"
   }
 }

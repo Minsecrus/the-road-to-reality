@@ -16,8 +16,15 @@ public final class TRTRCreativeTabs {
                     .icon(() -> TRTRItems.FLINT.get().getDefaultInstance())
                     .displayItems((params, output) -> {
                         output.accept(TRTRItems.FLINT.get());
-                        output.accept(TRTRItems.STICK.get());
                         output.accept(TRTRItems.PLANT_FIBER.get());
+                        output.accept(TRTRItems.FLINT_BLADE.get());
+                        output.accept(TRTRItems.ROPE.get());
+                        output.accept(TRTRItems.GRASS_BUNDLE.get());
+                        output.accept(TRTRItems.FIRE_DRILL.get());
+                        output.accept(TRTRItems.HIDE.get());
+                        output.accept(TRTRItems.SCRAPED_HIDE.get());
+                        output.accept(TRTRItems.DRYING_RACK.get());
+                        output.accept(TRTRItems.SOFT_ROCK.get());
                         output.accept(TRTRItems.FLINT_AXE.get());
                         output.accept(TRTRItems.FLINT_KNIFE.get());
                         output.accept(TRTRItems.FLINT_SHOVEL.get());

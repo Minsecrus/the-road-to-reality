@@ -1,13 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "FF",
-    "FS",
-    " S"
+    "BB",
+    "RS"
   ],
   "key": {
-    "F": { "item": "trtr:flint_shard" },
-    "S": { "item": "trtr:wood_stick" }
+    "B": {
+      "item": "trtr:flint_blade"
+    },
+    "R": {
+      "item": "trtr:rope"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
   },
-  "result": { "id": "trtr:flint_axe", "count": 1 }
+  "result": {
+    "id": "trtr:flint_axe",
+    "count": 1
+  }
 }

@@ -1,9 +1,0 @@
-{
-  "neoforge:conditions": [
-    { "type": "neoforge:false", "comment": "trtr: 粗石镐由散石产出圆石合成（003）" }
-  ],
-  "type": "minecraft:crafting_shaped",
-  "pattern": [ "PPP", " S ", " S " ],
-  "key": { "P": { "item": "minecraft:cobblestone" }, "S": { "item": "minecraft:stick" } },
-  "result": { "id": "minecraft:stone_pickaxe" }
-}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "trtr:block/drying_rack"
+    },
+    "stage=1": {
+      "model": "trtr:block/drying_rack_wet"
+    },
+    "stage=2": {
+      "model": "trtr:block/drying_rack_wet"
+    },
+    "stage=3": {
+      "model": "trtr:block/drying_rack_dry"
+    }
+  }
+}

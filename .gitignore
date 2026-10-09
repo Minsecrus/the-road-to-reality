@@ -14,3 +14,6 @@ bin/
 # runtime
 run/
 runs/
+
+# generated texture previews
+scripts/_texture_inspect/

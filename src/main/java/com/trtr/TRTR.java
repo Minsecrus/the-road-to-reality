@@ -11,5 +11,7 @@ public class TRTR {
         TRTRBlocks.BLOCKS.register(modBus);
         TRTRItems.ITEMS.register(modBus);
         TRTRCreativeTabs.TABS.register(modBus);
+        TRTRMenus.MENUS.register(modBus);
+        TRTRLootModifiers.SERIALIZERS.register(modBus);
     }
 }

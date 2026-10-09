@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": {
+      "item": "trtr:plant_fiber"
+    }
+  },
+  "result": {
+    "id": "trtr:grass_bundle",
+    "count": 1
+  }
+}

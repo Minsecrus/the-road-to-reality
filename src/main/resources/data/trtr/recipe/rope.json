@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "trtr:plant_fiber"
+    },
+    {
+      "item": "trtr:plant_fiber"
+    },
+    {
+      "item": "trtr:plant_fiber"
+    }
+  ],
+  "result": {
+    "id": "trtr:rope",
+    "count": 1
+  }
+}

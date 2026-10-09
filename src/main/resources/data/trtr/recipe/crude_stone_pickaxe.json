@@ -1,13 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "CCC",
-    " S ",
-    " S "
+    "CC",
+    "RS"
   ],
   "key": {
-    "C": { "item": "minecraft:cobblestone" },
-    "S": { "item": "trtr:wood_stick" }
+    "C": {
+      "item": "trtr:loose_stone"
+    },
+    "R": {
+      "item": "trtr:rope"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
   },
-  "result": { "id": "trtr:crude_stone_pickaxe", "count": 1 }
+  "result": {
+    "id": "trtr:crude_stone_pickaxe",
+    "count": 1
+  }
 }

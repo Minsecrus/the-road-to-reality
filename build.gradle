@@ -15,8 +15,21 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
 }
 
+sourceSets {
+    gameTest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+
+configurations {
+    gameTestImplementation.extendsFrom implementation
+    gameTestRuntimeOnly.extendsFrom runtimeOnly
+}
+
 neoForge {
     version = project.neo_version
+    addModdingDependenciesTo(sourceSets.gameTest)
 
     runs {
         client {
@@ -28,11 +41,17 @@ neoForge {
         data {
             data()
         }
+        gameTestServer {
+            type = 'gameTestServer'
+            gameDirectory = file('run/m0-gametest')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'trtr'
+        }
     }
 
     mods {
         "${project.mod_id}" {
             sourceSet(sourceSets.main)
+            sourceSet(sourceSets.gameTest)
         }
     }
 }

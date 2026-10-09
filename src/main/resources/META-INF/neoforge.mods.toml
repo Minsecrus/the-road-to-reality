@@ -15,13 +15,13 @@ Real inorganic chemistry and a historically grounded industrial progression, fro
 [[dependencies.trtr]]
     modId = "neoforge"
     type = "required"
-    versionRange = "[21.1.0,)"
+    versionRange = "[21.1.248,21.2)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.trtr]]
     modId = "minecraft"
     type = "required"
-    versionRange = "[1.21.1,1.22)"
+    versionRange = "[1.21.1]"
     ordering = "NONE"
     side = "BOTH"

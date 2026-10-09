@@ -1,34 +1,46 @@
 package com.trtr.chem;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 class MixtureTest {
 
     @Test
-    void 纯度视图() {
-        // 粗铜场景：96 mol Cu + 4 mol S 杂质
-        Mixture crude = Mixture.of(1400, TRTRSubstances.COPPER, 96)
-                .plus(new Substance("sulfur", Formula.parse("S"), 388, 718, 0xd8c84a), 4);
-        assertEquals(0.96, crude.purityOf(TRTRSubstances.COPPER), 1e-9);
+    void purityIsMolarFractionView() {
+        // 粗铜：9 mol Cu + 1 mol Fe → 纯度 0.9（ADR-006）
+        Mixture crude = Mixture.of(1358, TRTRSubstances.COPPER, 9)
+                .plus(TRTRSubstances.IRON, 1);
+        assertEquals(0.9, crude.purityOf(TRTRSubstances.COPPER), 1e-12);
     }
 
     @Test
-    void 总质量按摩尔质量加权() {
-        // 2 mol H2O = 36.03 g
-        Mixture m = Mixture.of(300, TRTRSubstances.WATER, 2);
-        assertEquals(36.03, m.totalMass(), 1e-3);
+    void massSumsComponents() {
+        // 1 mol H2O + 1 mol Fe = 18.015 + 55.845
+        Mixture m = Mixture.of(300, TRTRSubstances.WATER, 1)
+                .plus(TRTRSubstances.IRON, 1);
+        assertEquals(73.86, m.totalMass(), 1e-9);
     }
 
     @Test
-    void 不可变性() {
-        Mixture a = Mixture.of(300, TRTRSubstances.WATER, 1);
-        Mixture b = a.plus(TRTRSubstances.SILICA, 1);
-        assertEquals(1, a.components().size());
-        assertEquals(2, b.components().size());
-        // 减到 0 的成分不出现在结果中
-        Mixture c = b.plus(TRTRSubstances.WATER, -1);
-        assertEquals(1, c.components().size());
+    void zeroOrNegativeAmountsRemoveComponent() {
+        Mixture m = Mixture.of(300, TRTRSubstances.IRON, 1)
+                .plus(TRTRSubstances.IRON, -1);
+        assertFalse(m.contains(TRTRSubstances.IRON));
+        assertEquals(0, m.totalMoles());
+    }
+
+    @Test
+    void immutableByConstruction() {
+        Mixture base = Mixture.of(300, TRTRSubstances.IRON, 1);
+        base.plus(TRTRSubstances.COPPER, 1);
+        assertFalse(base.contains(TRTRSubstances.COPPER));
+    }
+
+    @Test
+    void phaseFollowsTemperature() {
+        assertEquals(Substance.Phase.SOLID, TRTRSubstances.WATER.phaseAt(250));
+        assertEquals(Substance.Phase.LIQUID, TRTRSubstances.WATER.phaseAt(300));
+        assertEquals(Substance.Phase.GAS, TRTRSubstances.WATER.phaseAt(400));
     }
 }

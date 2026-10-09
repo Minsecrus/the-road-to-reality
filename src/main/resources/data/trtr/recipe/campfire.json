@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LG",
+    "LL"
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "G": {
+      "item": "trtr:grass_bundle"
+    }
+  },
+  "result": {
+    "id": "minecraft:campfire",
+    "count": 1,
+    "components": {
+      "minecraft:block_state": {
+        "lit": "false"
+      }
+    }
+  }
+}

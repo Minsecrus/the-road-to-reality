@@ -1,13 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "F",
-    "S",
-    "S"
+    "BR",
+    " S"
   ],
   "key": {
-    "F": { "item": "trtr:flint_shard" },
-    "S": { "item": "trtr:wood_stick" }
+    "B": {
+      "item": "trtr:flint_blade"
+    },
+    "R": {
+      "item": "trtr:rope"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
   },
-  "result": { "id": "trtr:flint_shovel", "count": 1 }
+  "result": {
+    "id": "trtr:flint_shovel",
+    "count": 1
+  }
 }
